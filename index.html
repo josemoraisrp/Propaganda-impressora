@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Impressões e Xerox Rápidos | Atendimento pelo WhatsApp</title>
+  <meta name="description" content="Serviço rápido de xerox e impressão com atendimento personalizado via WhatsApp. Impressões coloridas e preto e branco, com qualidade e agilidade." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand: #0f766e; /* teal-ish */
+      --accent: #06b6d4;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --card: #f8fafc;
+      --radius: 14px;
+      --max-width: 980px;
+      --gap: 20px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#0f172a;background:linear-gradient(180deg,#f8fafc 0%, #ffffff 100%)}
+    a{color:inherit}
+    .container{max-width:var(--max-width);margin:36px auto;padding:28px}
+
+    header{display:flex;align-items:center;gap:18px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:8px 0 0;color:var(--muted)}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:26px;align-items:center}
+    .card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(12,12,12,0.04)}
+
+    .features{display:flex;flex-direction:column;gap:12px}
+    .feature{display:flex;gap:12px;align-items:flex-start}
+    .feature .ico{width:44px;height:44px;border-radius:10px;background:#fff;display:grid;place-items:center;border:1px solid rgba(15,23,42,0.06);font-weight:600}
+
+    .how{margin-top:18px;display:flex;gap:12px;flex-direction:column}
+    .how .step{display:flex;gap:12px;align-items:flex-start}
+    .step .num{width:36px;height:36px;border-radius:10px;background:var(--brand);color:white;display:grid;place-items:center;font-weight:700}
+
+    .cta{display:flex;flex-direction:column;gap:12px}
+    .btn{display:inline-flex;gap:10px;align-items:center;justify-content:center;padding:12px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:var(--brand);color:white}
+    .btn-outline{background:transparent;border:1px solid rgba(15,23,42,0.08)}
+
+    .form-row{display:flex;gap:10px;flex-wrap:wrap}
+    .input,select{padding:10px;border-radius:8px;border:1px solid #26b322;background:white;min-width:0}
+
+    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* Floating WhatsApp button */
+    .whatsapp-float{position:fixed;right:18px;bottom:18px;width:64px;height:64px;border-radius:999px;background:#25D366;display:grid;place-items:center;color:#fff;font-size:28px;box-shadow:0 8px 24px rgba(37,211,102,0.18);z-index:999}
+     
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .logo .mark{width:48px;height:48px}
+      h1{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">M</div>
+        <div>
+          <div style="font-weight:700">Impressões & Xerox</div>
+          <div style="font-size:13px;color:var(--muted)">Atendimento rápido pelo WhatsApp</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="hero">
+      <section>
+        <div class="card">
+          <h1>Já precisou imprimir algo urgente e não encontrou ninguém aberto?</h1>
+          <p class="lead">Nós resolvemos isso pra você. Envie seu arquivo pelo WhatsApp, escolha o tipo de impressão e receba um orçamento rápido — sem complicação.</p>
+
+          <div class="features" style="margin-top:16px">
+            <div class="feature"><div class="ico">⚡</div><div><strong>Atendimento rápido</strong><div style="font-size:13px;color:var(--muted)">Resposta direta pelo WhatsApp</div></div></div>
+            <div class="feature"><div class="ico">🎨</div><div><strong>Impressões color e P&B</strong><div style="font-size:13px;color:var(--muted)">Frente e verso</div></div></div>
+            <div class="feature"><div class="ico">💼</div><div><strong>Qualidade profissional</strong><div style="font-size:13px;color:var(--muted)">Atendimento caprichado para os trabalhos e documentos</div></div></div>
+          </div>
+
+          <div class="how">
+            <div style="font-weight:700">Como funciona</div>
+            <div class="step"><div class="num">1</div><div>Clique no botão do WhatsApp</div></div>
+            <div class="step"><div class="num">2</div><div>Envie seu arquivo (PDF, foto ou DOC)</div></div>
+            <div class="step"><div class="num">3</div><div>Combine preço e retirada — pronto!</div></div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#contact" onclick="document.getElementById('message').focus();return false">Pedir orçamento pelo WhatsApp</a>
+          <a class="btn btn-outline" href="#precos">Ver preços orientativos</a>
+        </div>
+
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin-top:0">Solicitar impressão</h3>
+
+          <div style="font-size:13px;color:var(--muted);margin-bottom:10px">Preencha os dados e clique em "Enviar pelo WhatsApp" — o app abrirá com a mensagem pronta.</div>
+
+          <div class="form-row" style="margin-bottom:10px">
+            <input id="name" class="input" placeholder="Seu nome (opcional)" />
+          </div>
+
+          <div class="form-row" style="margin-bottom:10px">
+            <select id="type" class="input">
+              <option value="Preto e branco">Preto e branco - P&B</option>
+              <option value="Colorida">Colorida</option>
+              <option value="Frente e verso">Frente e verso</option>
+            </select>
+            <input id="copies" class="input" placeholder="Quantidade (ex: 10)" type="number" min="1" value="1" />
+          </div>
+
+          <div style="margin-bottom:10px">
+            <input id="file" type="file" accept="application/pdf,image/*,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+          </div>
+
+          <textarea id="message" class="input" placeholder="Mensagem / instruções adicionais" rows="3" style="width:100%"></textarea>
+
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button class="btn btn-primary" onclick="sendWhatsapp()">Enviar pelo WhatsApp</button>
+            <button class="btn btn-outline" onclick="clearForm()">Limpar</button>
+          </div>
+
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)"></div>
+        </div>
+
+        <div class="card" style="margin-top:12px;text-align:center">
+          <div style="font-weight:700">Horário de Atendimento</div>
+          <div style="color:var(--muted);margin-top:6px">Seg — Seg: 08:00 — 20:00<br>Finais/feriados: Consultar disponibilidade</div>
+        </div>
+
+      </aside>
+    </main>
+
+    <section id="precos" style="margin-top:22px">
+      <div class="card">
+        <h3 style="margin-top:0">Preços orientativos</h3>
+        <ul style="margin:8px 0 0 18px;color:var(--muted)">
+          <li>Preto e branco (A4): R$ 0,50 </li>
+          <li>Colorida (A4): R$ 1,00 </li>
+          <li>Scanear documentos (A4): R$ 1,00 </li>
+          
+        </ul>
+        <div style="font-size:13px;color:var(--muted);margin-top:8px">.</div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <div class="card">
+        <h3 style="margin-top:0">Contato</h3>
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <div style="min-width:0;flex:1">
+            <div style="font-weight:700">WhatsApp</div>
+            <div style="color:var(--muted);font-size:13px">Clique no botão verde ou use: <strong>5516993052603</strong></div>
+          </div>
+          <div>
+            <a class="btn btn-primary" href="https://wa.me/5516993052603" target="_blank">Abrir WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Impressões & Xerox — Atendimento pelo WhatsApp
+    </footer>
+  </div>
+
+  <!-- Floating WhatsApp button -->
+  <a id="waFloat" class="whatsapp-float" href="https://wa.me/5516993052603" target="_blank" title="Chamar no WhatsApp">📱 </a>
+
+  <script>
+    // Atualiza ano no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Substitua a variável abaixo pelo seu número sem espaços/decoradores (ex: 5511999998888)
+    const PHONE = '5516993052603';
+
+    function clearForm(){
+      document.getElementById('name').value='';
+      document.getElementById('type').value='Preto e branco';
+      document.getElementById('copies').value='1';
+      document.getElementById('file').value=null;
+      document.getElementById('message').value='';
+    }
+
+    function sendWhatsapp(){
+      const name = document.getElementById('name').value.trim();
+      const type = document.getElementById('type').value;
+      const copies = document.getElementById('copies').value || '1';
+      const fileInput = document.getElementById('file');
+      const extra = document.getElementById('message').value.trim();
+
+      let filePart = '';
+      if(fileInput.files && fileInput.files.length){
+        // pegamos apenas o nome do arquivo — envio do arquivo deve ser feito manualmente no WhatsApp
+        const f = fileInput.files[0];
+        filePart = `\nArquivo: ${f.name}`;
+      }
+
+      let message = `Olá! Preciso de um orçamento para impressão.`;
+      if(name) message += `\nNome: ${name}`;
+      message += `\nTipo: ${type}\nQuantidade: ${copies}${filePart}`;
+      if(extra) message += `\nObservações: ${extra}`;
+
+      const encoded = encodeURIComponent(message);
+      const url = `https://wa.me/${PHONE}?text=${encoded}`;
+
+      // abre em nova aba — no celular abrirá o app
+      window.open(url, '_blank');
+    }
+
+    // atualiza links visuais com o telefone configurado
+    (function patchLinks(){
+      const elems = document.querySelectorAll('a[href*="SEUNUMERO"], a[href*="55SEUNUMERO"]');
+      elems.forEach(a=>{
+        a.href = a.href.replace('55SEUNUMERO', PHONE).replace('SEUNUMERO', PHONE);
+      });
+      const float = document.getElementById('waFloat');
+      if(float) float.href = float.href.replace('55SEUNUMERO', PHONE).replace('SEUNUMERO', PHONE);
+    })();
+  </script>
+</body>
+</html>
